@@ -400,7 +400,7 @@ add_filter( 'excerpt_more', 'twentyseventeen_excerpt_more' );
  * @return int (Maybe) modified excerpt length.
  */
 function wpdocs_custom_excerpt_length( $length ) {
-    return 10;
+    return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 // ----------------------------------------------------------------------------------------------------------
@@ -679,3 +679,25 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
  * sidebar
  */
 require get_parent_theme_file_path( '/inc/sidebar-post.php' );
+
+
+function testimoniales_home() {
+	ob_start();
+    get_template_part('testimonialeshome');
+    return ob_get_clean(); 
+}
+add_shortcode('testimonialeshome', 'testimoniales_home');
+
+function testimoniales_nosotros() {
+	ob_start();
+    get_template_part('testimonialesnosotros');
+    return ob_get_clean(); 
+}
+add_shortcode('testimonialesnosotros', 'testimoniales_nosotros');
+
+function listblog_home() {
+	ob_start();
+    get_template_part('listbloghome');
+    return ob_get_clean(); 
+}
+add_shortcode('listbloghome', 'listblog_home');

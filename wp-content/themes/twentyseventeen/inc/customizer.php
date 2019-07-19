@@ -115,6 +115,194 @@ function twentyseventeen_customize_register( $wp_customize ) {
 		)
 	);
 
+	/* FOOTER */
+
+	$wp_customize->add_section( 'footer', array(
+		'title'    => __( 'footer', 'twentyseventeen' ),
+		'priority' => 130, // Before Additional CSS.
+	));
+
+	//dirección español
+	$wp_customize->add_setting( 'direccion_español', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'direccion_español', array(
+        'label'       => __( 'Direccion Español', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+	//dirección ingles
+	$wp_customize->add_setting( 'direccion_ingles', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'direccion_ingles', array(
+        'label'       => __( 'Direccion Inglés', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+	//teléfono
+	$wp_customize->add_setting( 'telefono_footer', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'telefono_footer', array(
+        'label'       => __( 'Teléfono', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+	//correo
+	$wp_customize->add_setting( 'correo_footer', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'correo_footer', array(
+        'label'       => __( 'Correo', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+	//link facebook
+	$wp_customize->add_setting( 'link_facebook', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'link_facebook', array(
+        'label'       => __( 'link Facebook', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+	//link twitter
+	$wp_customize->add_setting( 'link_twitter', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'link_twitter', array(
+        'label'       => __( 'link Twitter', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+	//link youtube
+	$wp_customize->add_setting( 'link_youtube', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'link_youtube', array(
+        'label'       => __( 'link Youtube', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+	//link linkedin
+	$wp_customize->add_setting( 'link_linkedin', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'link_linkedin', array(
+        'label'       => __( 'link Linkedin', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'input'
+	));
+
+	//cookies español
+	$wp_customize->add_setting( 'cookies_español', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'cookies_español', array(
+        'label'       => __( 'Cookies español', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+	//cookies ingles
+	$wp_customize->add_setting( 'cookies_ingles', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'cookies_ingles', array(
+        'label'       => __( 'Cookies ingles', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+
+	//disclaimer español
+	$wp_customize->add_setting( 'disclaimer_español', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'disclaimer_español', array(
+        'label'       => __( 'disclaimer español', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+	//disclaimer ingles
+	$wp_customize->add_setting( 'disclaimer_ingles', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'disclaimer_ingles', array(
+        'label'       => __( 'disclaimer ingles', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+
+	//politicas español
+	$wp_customize->add_setting( 'politicas_español', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'politicas_español', array(
+        'label'       => __( 'politicas español', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+	//politicas ingles
+	$wp_customize->add_setting( 'politicas_ingles', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'politicas_ingles', array(
+        'label'       => __( 'politicas ingles', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+
+	//tyc español
+	$wp_customize->add_setting( 'tyc_español', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'tyc_español', array(
+        'label'       => __( 'tyc español', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+	//tyc ingles
+	$wp_customize->add_setting( 'tyc_ingles', array(
+        'default'           => '',
+        'transport'         => 'refresh',
+    ) );
+
+	$wp_customize->add_control( 'tyc_ingles', array(
+        'label'       => __( 'tyc ingles', 'twentyseventeen' ),
+        'section'     => 'footer',
+        'type'        => 'textarea'
+	));
+
 	/**
 	 * Filter number of front page sections in Twenty Seventeen.
 	 *

@@ -15,7 +15,11 @@ get_header(); ?>
 <div class="wrap aling_h">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+				<div class="blog-img-entrada">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail( 'twentyseventeen-featured-image' ); ?>
+					</a>
+				</div>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -41,11 +45,7 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 	   <!-- SIDEBAR -->
-	   <div class="content-sidbar">
-      <?php if ( is_active_sidebar('sidebar_post') ) : ?>
-          <?php dynamic_sidebar('sidebar_post'); ?>
-      <?php endif; ?>
-    </div>
+	  
     <!-- FIN SIDEBAR -->
 </div><!-- .wrap -->
 

@@ -5,6 +5,9 @@ WP-Cache Config Sample File
 See wp-cache.php for author details.
 */
 
+$wp_cache_home_path = '/ScmMobility/';
+$wp_cache_slash_check = 1;
+$cache_page_secret = '8bd19a065771467550fecce5e3d63feb';
 $cache_time_interval = 600;
 if ( ! defined('WPCACHEHOME') )
 	define( 'WPCACHEHOME', WP_CONTENT_DIR . "/plugins/wp-super-cache/" );

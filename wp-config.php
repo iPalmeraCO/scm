@@ -25,7 +25,7 @@ define( 'WPCACHEHOME', '/var/www/html/ScmMobility/wp-content/plugins/wp-super-ca
 define( 'DB_NAME', 'scm_mobility' );
 
 /** MySQL database username */
-define( 'DB_USER', 'root' );
+define( 'DB_USER', 'phpmyadmin' );
 
 /** MySQL database password */
 define( 'DB_PASSWORD', 'jTBTaWD2yQ' );
@@ -38,6 +38,8 @@ define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The Database Collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+define( 'PLL_COOKIE', false);
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -79,7 +81,7 @@ $table_prefix = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 /* That's all, stop editing! Happy publishing. */
 

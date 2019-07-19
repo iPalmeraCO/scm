@@ -12,6 +12,8 @@
     */
 
 get_header(); ?>
+<?php $currentlang = get_bloginfo('language');
+ ?>
 <div class="container">
    <?php   
       while ( have_posts() ) : the_post();
@@ -37,20 +39,25 @@ get_header(); ?>
            echo $before_title . $title . $after_title;
    ?>
 <div class="container margenes_ab">
-	<div class="row aling-hor2">
-    <div class="padre-entradas">
+	<!-- <div class="row aling-hor2">
+    <div class="padre-entradas"> -->
+  <div class="">
+    <div class="">
       <?php
         while ($r->have_posts()):
         $r->the_post();
       ?> 
                   
       <article class="content-entrada">
-        <div class="blog-img">
+        <!-- <div class="blog-img"> -->
+        <div class="">
           <a href="<?php echo get_permalink(); ?>">
             <div class="img-blog"><?php if (has_post_thumbnail() ) :  the_post_thumbnail('large'); endif; ?></div>
           </a>
         </div>
-        <div class="cont_all_text">
+        <!-- <div class="cont_all_text"> -->
+        <!-- <div style="margin-left: 20px;" > -->
+        <div class="text-content-blog">
           <div class="fecha-blog"><?php the_time('M-d-Y') ?></div>
           <a href="<?php echo get_permalink(); ?>">
             <div class="content-title">
@@ -70,11 +77,11 @@ get_header(); ?>
       ?>
     </div>
     <!-- SIDEBAR -->
-    <div class="content-sidbar">
-      <?php if ( is_active_sidebar('sidebar_post') ) : ?>
-          <?php dynamic_sidebar('sidebar_post'); ?>
-      <?php endif; ?>
-    </div>
+    <!-- <div class="content-sidbar"> -->
+      <?php //if ( is_active_sidebar('sidebar_post') ) : ?>
+          <?php //dynamic_sidebar('sidebar_post'); ?>
+      <?php //endif; ?>
+    <!-- </div> -->
     <!-- FIN SIDEBAR -->
 
   </div>
@@ -99,7 +106,11 @@ get_header(); ?>
             echo '<div class="pagination-wrap "><ul class="pagination container blog-pag">';
             if ($paged != 1){        
               $n = $paged - 1;      
-              echo '<li><a class="prev page-numbers" href="'.get_site_url()."/blog/page/".$n.'"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>';              
+              if ($currentlang == 'es') {
+                echo '<li><a class="prev page-numbers" href="'.get_site_url()."/index.php/blog-2-2/page/".$n.'"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>';
+              }else{
+                echo '<li><a class="prev page-numbers" href="'.get_site_url()."/index.php/en/blog-eng/page/".$n.'"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>';
+              }             
             } else {
               // echo '<li><a class="prev page-numbers" href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>';              
             }
@@ -111,12 +122,21 @@ get_header(); ?>
               } else {
                 $class = "";
               }
-              echo "<li class='".$class." element'><a href='".get_site_url()."/blog/page/".$cont."'>".$cont."</a></li>";
+              if ($currentlang == 'es') {
+                 echo "<li class='".$class." element'><a href='".get_site_url()."/index.php/blog-2-2/page/".$cont."'>".$cont."</a></li>";
+              }else{
+                echo "<li class='".$class." element'><a href='".get_site_url()."/index.php/en/blog-eng/page/".$cont."'>".$cont."</a></li>"; 
+              }
               $cont ++;
             }
             if ($paged != $total_pages){
               $n = $paged + 1;
-              echo '<li><a class="next page-numbers" href="'.get_site_url()."/blog/page/".$n.'"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>';
+              if ($currentlang == 'es') {
+                echo '<li><a class="next page-numbers" href="'.get_site_url()."/index.php/blog-2-2/page/".$n.'"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>';
+              }else{
+                echo '<li><a class="next page-numbers" href="'.get_site_url()."/index.php/en/blog-eng/page/".$n.'"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>';
+              }
+              
             } else {
               // echo '<li><a class="next page-numbers" href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>';
             }

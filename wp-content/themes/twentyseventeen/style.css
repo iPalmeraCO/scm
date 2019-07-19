@@ -1967,7 +1967,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 
 .pagination,
 .comments-pagination {
-	border-top: 1px solid #eee;
+	/* border-top: 1px solid #eee; */
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 800;
@@ -2034,7 +2034,8 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .next.page-numbers {
-	float: right;
+	/* float: right; */
+	display: none;
 }
 
 /* Aligned blockquotes */
@@ -4456,6 +4457,16 @@ a:hover{
 	display: flex;
 }
 
+li#menu-item-28{
+	position: relative;
+}
+
+li#menu-item-28::before{
+	content: url(http://159.203.108.98/ScmMobility/wp-content/uploads/2019/05/icono-telefono.png);
+	position: absolute;
+	margin-top: 15px;
+}
+
 /* Fin estilos menu */
 
 /* estilos boton */
@@ -4465,10 +4476,12 @@ a:hover{
 
 .btn{
 	background: #fff;
-	padding: 9px 2px 0 2px;
+	/*padding: 9px 2px 0 2px;*/
+	padding: 9px 5.5px 0 5.5px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
 	border-radius: 30px;
-    width: 134px;
+    /*width: 134px;*/
+    width: auto;
     height: 44px;
 }
 
@@ -4515,6 +4528,43 @@ a:hover{
 	margin-top:30px
 }
 
+.carousel-control-prev-icon{
+	position: relative;
+	background-image: none;
+}
+
+.carousel-control-prev-icon::before{
+	background: #CEAB6E;
+    border-radius: 50%;
+    padding: 10px 22px;
+	color: #002E58;
+	content: '<';
+	position: absolute;
+	bottom:64px;
+	left: -13px;
+	font-size: 25px;
+	font-weight: 900;
+}
+
+.carousel-control-next-icon{
+	position: relative;
+	background-image: none;
+}
+
+.carousel-control-next-icon::before{
+	background: #CEAB6E;
+    border-radius: 50%;
+    padding: 10px 22px;
+	color: #002E58;
+	content: '>';
+	position: absolute;
+	bottom:63px;
+	left:-24px;
+	font-size: 25px;
+	font-weight: 900;
+}
+
+
 .cuadro-azul{
 	padding: 20px 20px 0 20px;
     background: rgba(0,46,88,0.65);
@@ -4540,7 +4590,15 @@ margin-bottom: 50px;
 	column-gap: 45px;
 	justify-content: center;
 	margin-bottom: 50px;
-	}
+}
+.column-1{
+    column-gap: 45px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.column-1 .cuadros-intro{
+	margin: 0 auto;
+}
 
 .alinear-fin{
 	display: grid;
@@ -4579,7 +4637,7 @@ margin-bottom: 50px;
 	padding: 20px;
     border: 1px solid #002E58;
 	border-radius: 0 0 10px 10px;
-	height: 243px;
+	min-height: 283px;
 }
 
 .home-servicios{
@@ -4689,6 +4747,10 @@ h4.widgettitle {
 	height: 95px;
 }
 
+.nosotros-img-vision{
+	display: none;
+}
+
 .nosotros-testimoniales-titulo{
 	text-align: center;
 	margin: 44px 0;
@@ -4701,7 +4763,7 @@ h4.widgettitle {
 .nosotros-testimoniales{
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
-	margin: 0 50px;
+	margin: 0 100px;
 }
 
 .nosotros-testimoniales-img{
@@ -4724,6 +4786,15 @@ h4.widgettitle {
 	color: #fff;
 }
 
+.testimoniales{
+	text-align: center;
+    display: grid;
+	justify-items: center;
+	margin: 30px 0;
+    border-bottom: 1px solid #cfcfcf;
+    padding-bottom: 30px;
+}
+
 .productos-logo-descrip{
 	display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -4734,9 +4805,16 @@ h4.widgettitle {
 .productos-logo-img{
 	text-align: end;
 }
+.productos-logo-img-margen-sup{
+	padding-top: 20px;
+}
+
+.productos-margen-texto{
+	margin-right: 130px;
+}
 
 .margen-sup{
-	margin-top:20px;
+	margin-top:30px;
 }
 
 .cuadro-beneficios{
@@ -4803,7 +4881,8 @@ h4.widgettitle {
 .content-entrada {
 	display: flex;
 	margin-bottom: 25px;
-	margin-right: 20px;
+	/*margin-right: 20px;*/
+	border: 1px solid #C8C8D2;
 	
 }
 
@@ -4814,7 +4893,7 @@ h4.widgettitle {
 
 .cont_all_text {
     margin-left: 20px;
-	width: 400px;
+	width: 320px;
     /* background: red; */
 }
 
@@ -4837,6 +4916,43 @@ h4.widgettitle {
 	margin-top: 50px;
 }
 
+.pagination{
+	display: flex;
+    justify-content: center;
+}
+
+.element{
+	padding: 10px 18px;
+    border: 1px solid #A80000;
+}
+
+.bulletactive{
+	background: #A80000;
+}
+
+.bulletactive a{
+	color: #fff;
+}
+
+.entry-title {
+	color: #A80000;
+	font-family: 'Anton', sans-serif;
+}
+
+.entry-footer{
+	display: none;
+}
+
+.nav-title {
+	color: #A80000;
+	font-family: 'Anton', sans-serif;
+}
+
+.blog-img-entrada{
+	margin-bottom: 30px;
+}
+
+
 /* FIN blog */
 
 
@@ -4850,7 +4966,8 @@ footer{
 
 .footer-cont{
 	display: grid;
-	grid-template-columns: 1.3fr 1fr 1fr 1.3fr 1fr;
+	/*grid-template-columns: 1.3fr 0.9fr 1.3fr 1.3fr 1fr;*/
+	grid-template-columns: 1fr 2fr 1.5fr 1fr;
 	column-gap: 20px;
 }
 
@@ -4858,7 +4975,9 @@ footer{
 	color: #002E58;
 	text-decoration: none;
 	list-style: none;
-	margin-bottom: 5px;
+	/*margin-bottom: 5px;*/
+	margin-bottom: 16px;
+    line-height: 14px;
 }
 
 .footer-links ul li a{
@@ -4870,6 +4989,10 @@ footer{
 
 .footer-links ul li a:hover{
 	color: #A80000;
+}
+
+.footer-links ul{
+	column-count: 3;
 }
 
 .footer-datosEmpresa{
@@ -4888,7 +5011,7 @@ footer{
 
 .footer-redes ul{
 	display: grid;
-    grid-template-columns: repeat(4,0.2fr);
+    grid-template-columns: 0.14fr 0.2fr 0.2fr 0.2fr;
 }
 
 
@@ -4933,6 +5056,86 @@ footer{
 
 /* fin footer */
 
+.enlaceinactivo>a{
+	pointer-events: none;
+	cursor: default;
+}
+.cuadros-intro-text ul {
+    margin-left: 10px;
+}
+.imgsonda{
+	width: 154px;
+}
+.contentservisop{
+	text-align: center;
+    font-style: oblique;
+    margin-bottom: 21px;
+}
+.contentservisop p{
+	font-family: sans-serif!important;
+    font-size: 14px!important;
+    margin: 0;
+}
+.contenttestimo{
+	text-align: left;
+}
+.text-content-blog{
+	padding: 0px 20px 20px;
+}
+
+.footer-links ul li:nth-child(6n) {
+    /*margin-bottom: 33px;*/
+}
+.modal-header{
+	display: initial;
+}
+.modal-dialog {
+    margin-top: 6%;
+}
+.modal-body{
+	padding: 32px 58px;
+}
+.bnvermas{
+	-webkit-box-shadow: none!important;
+    box-shadow: none!important;
+        width: 140px!important;
+        height: auto!important;
+}
+.bnvermas:hover{
+    width: 151.2px!important;	
+}
+.btn:hover .btn-interna{
+	font-size: 13px;
+}
+.btn:hover{
+	height: 45px;
+}
+.marginsupdos{
+	margin-top: 55px;
+}
+.marginsuptres{
+	margin-top: 75px;	
+}
+.minheigthprodsonda{
+	min-height: 331px!important;
+}
+.cuadrosbeneficiosdos{
+	text-align: center;
+    margin: 40px 109px;
+}
+.cuadroimgprod{
+	display: inline-block;
+}
+.cuadro-indv-textodos{
+	display: inline-block;
+    padding: 25px;
+}
+
+@media (min-width: 576px) {
+	.modal-dialog {
+	    max-width: 700px;
+	}
+}
 @media (max-width: 768px){
 
 	.column-3 {
@@ -4994,6 +5197,7 @@ footer{
 	}
 
 	.content-entrada {
+		display: grid;
 		grid-template-columns: 1fr;
 	}
 
@@ -5003,6 +5207,16 @@ footer{
 }
 
 @media (max-width: 767px){
+	.img-blog img{
+		width: 100%;
+	}
+	.text-content-blog{
+		text-align: center;
+	}
+	.text-content-blog .fecha-blog{
+		margin: 0 auto;
+    	margin-top: 15px;
+	}
 	.site-content {
 		padding: 0 0 0;
 	}
@@ -5032,8 +5246,26 @@ footer{
 		margin: 8px 0 0 20px;
 	}
 
+	.tp-simpleresponsive{
+		margin-top:112px !important;
+	}
+
 	.btn {
+		/*position: absolute;*/
+		right: 0px;
 		margin-bottom: 25px;
+	}
+	.productos-logo-texto p{
+		text-align: center;
+	}
+	.productos-margen-texto{
+		margin-right: 0;
+		text-align: center; 
+	}
+
+	h2,
+	.home.blog .entry-title {
+		margin-top:20px;
 	}
 
 	.cuadros-intro {
@@ -5041,6 +5273,10 @@ footer{
 	}
 
 	/* home */
+
+	.carousel{
+		margin-top: 39px;
+	}
 
 	.cuadro-azul {
 		width: 100%;
@@ -5057,6 +5293,14 @@ footer{
 	/* nosotros */
 	.nosotros-testimoniales {
 		margin: 0;
+	}
+
+	.nosotros-img-vision{
+		display: flex;
+	}
+
+	.nosotros-img-vision-2{
+		display: none;
 	}
 
 	/* mobility */
@@ -5087,8 +5331,29 @@ footer{
 		row-gap: 40px;
 	}
 
+	.productos-logo-img{
+		text-align: center;
+	}
+
 	footer {
 		text-align: center;
+	}
+
+	.footer-links-cont{
+		/*display: grid;
+		grid-template-columns: 1fr 1fr;*/
+		text-align: left;
+		padding: 24px;
+	}
+	.footer-links ul{
+		column-count: 2;
+	}
+	.footer-links ul li:nth-child(6n) {
+	    margin-bottom: 5px;
+	}
+
+	.footer-datosEmpresa{
+		border-right: 0px; 
 	}
 
 	.footer-redes ul {
